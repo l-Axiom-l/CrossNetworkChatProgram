@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossNetworkChat.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Settings" IconImageSource="gearicon.png" Order="Primary"></ToolbarItem>
+        <ToolbarItem x:Name="Contacts" IconImageSource="contacticon.png" Order="Primary"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout BackgroundColor="Black">
+        <ScrollView HeightRequest="700" BackgroundColor="Black">
+            <Label x:Name="Chat" FontSize="20" TextColor="White"></Label>
+        </ScrollView>
+        <Grid RowDefinitions="*" ColumnDefinitions="*, 100">
+            <Entry x:Name="Input" Placeholder="Type you Message" Grid.Column="0"></Entry>
+            <Button x:Name="Send" Text="Send" Grid.Column="1"></Button>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
